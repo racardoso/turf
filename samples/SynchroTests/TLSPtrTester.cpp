@@ -11,6 +11,8 @@ See the LICENSE file for more information.
 ------------------------------------------------------------------------*/
 
 #include <vector>
+#include <cstdlib>
+
 #include <turf/Thread.h>
 #include <turf/TID.h>
 #include <turf/TLSPtr.h>
@@ -45,7 +47,7 @@ public:
 
         tlsPtr.setData(new int(threadNum));
 
-        turf::Thread::sleepMillis(rand() % 100);
+        turf::Thread::sleepMillis(std::rand() % 100);
 
         threadParam->pTester->m_tlsValuesByThreadNum[threadNum] = *tlsPtr;
 

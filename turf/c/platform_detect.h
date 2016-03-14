@@ -83,7 +83,7 @@
         #endif
     #elif defined(__powerpc__) || defined(__POWERPC__) || defined(__PPC__)
         #define TURF_CPU_POWERPC 1
-        #define TURF_PTR_SIZE 4  // Only 32-bit detected for now
+        #define TURF_PTR_SIZE 8
     #else
         #error "Unrecognized target CPU!"
     #endif
